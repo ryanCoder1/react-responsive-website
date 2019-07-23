@@ -1,0 +1,39 @@
+
+
+@mixin home-headers($lightOrange, $black) {
+  width: 100%;
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  display: inline;
+  overflow: hidden;
+  transition: .5s;
+
+
+  &:before {
+    content: '';
+    width: 150%;
+    height: 100%;
+    display: inline;
+    background-color: $lightOrange;
+    padding: 5px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-105%);
+    transition: .5s;
+ }
+ a{
+  color: $black;
+  position: relative;
+  z-index: 4;
+  text-decoration: none;
+ }
+
+
+  &:hover:before {
+
+    transform: translateX(-25%);
+  }
+
+ }

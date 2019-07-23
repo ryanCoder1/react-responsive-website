@@ -1,0 +1,236 @@
+/* Scss file for react website */
+
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import 'styles/_variables';
+@import 'styles/_mixins';
+
+
+
+
+
+/****************
+Nav
+*****************/
+.nav-bar {
+  height: 65px;
+  width: 100%;
+  border-bottom: solid thin #cccccc;
+}
+.logo-wrapper {
+  height: inherit;
+
+}
+.img-logo {
+  width: 30px;
+  height: 40px;
+}
+.nav-ul {
+  height: inherit;
+}
+.nav-ul li {
+  margin: 10px;
+  list-style: none;
+}
+.nav-ul li a {
+  color: $logoGrey;
+}
+
+
+/****************
+Home Header
+*****************/
+
+.bg-image {
+  position: relative;
+  height: 500px;
+  background-image: linear-gradient(to bottom, rgba($logoGreen, .3), rgba($logoGrey, .6)), url(./images/yogahero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+
+.business-info {
+  background-color: rgba($logoGreen, .8);
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 10px 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.business-info span {
+
+  padding: 0 15px;
+}
+.b-right {
+  border-right: solid thin #cccccc;
+}
+.header-side {
+
+  border-bottom: solid thin #cccccc;
+}
+.header-side-img {
+  height: 200px;
+  width: 100px;
+}
+@media screen and (max-width: 992px){
+  .bg-image {
+    height: 350px;
+
+  }
+  .header-side-img {
+    height: 75px;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 768px){
+  .bg-image {
+    height: 250px;
+
+  }
+  .b-right {
+    border-right: none;
+  }
+}
+
+/****************
+Home Info section
+****************/
+
+.home-info {
+  min-height: 350px;
+}
+
+.home-about-img {
+  width: 100%;
+  height: 300px;
+  // box-shadow: -4px 0 3px 1px rgba(0,0,0, .5);
+  border: solid thin $darkBlue;
+}
+.home-about-info .link {
+  color: $white;
+  background-color: $darkBlue;
+
+  &:hover {
+    background-color: $lighterBlue;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+/***************
+Home Services
+***************/
+
+
+
+.home-headers {
+@include home-headers($lightOrange, $black);
+}
+
+
+
+.home-services-ul {
+  list-style: none;
+
+   li {
+    width: 300px;
+    min-height: 325px;
+    margin: 25px;
+    transition: .4s;
+
+    .services-image-div {
+      width: 100%;
+      height: 175px;
+      position: relative;
+      overflow: hidden;
+      border: solid thin $black;
+    }
+    &:hover {
+      background-color: $logoGreen;
+      color: $logoGrey;
+
+      .services-image-div {
+        border: solid thin $logoGreen;
+      }
+      img {
+
+        transform: scale(1.05);
+      }
+  }
+}
+  .services-text {
+    padding: 20px 10px 10px 10px;
+  }
+  li img {
+    width: inherit;
+    height: 175px;
+    position: absolute;
+    transition: .4s;
+  }
+
+
+}
+/****************
+Contact advertise
+****************/
+
+.contact-advertise {
+  position: relative;
+  height: 250px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0, .8), rgba(0,0,0, .9)), url(./images/yogaclassoutside.jpg);
+   //linear-gradient(to bottom, rgba(0,0,0, .8), rgba($logoGrey, .9)),
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-advertise h2 {
+  color: $white;
+  font-weight: lighter;
+}
+.contact-color {
+  color: $lightOrange;
+  font-size: 50px;
+
+}
+.contact-link {
+  margin-top: 25px;
+}
+.contact-link a {
+
+  color: $white;
+  background-color: $lightOrange;
+  padding: 5px 20px 10px 20px;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -o-border-radius: 7px 7px 7px 7px;
+  border: solid thin #f2f2f2;
+  transition: .6s;
+}
+.contact-link a:hover {
+  color: $lightOrange;
+  background-color: $white;
+  text-decoration: none;
+}
+
+/****************
+Home Testimonials
+****************/
+
+.home-testimonials {
+  min-height: 400px;
+
+}
+.carousel-wrapper {
+  max-width: 700px;
+}
+.testimonial-car-center {
+  position: relative;
+
+}
