@@ -8,8 +8,17 @@
 @import 'styles/_mixins';
 
 
+/**************************
+Misc used multiple pages
+***************************/
 
+.page-name {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgba(255,255,255, .8);
+  text-shadow: 1px 1px 2px rgba(0,0,0, 1);
 
+}
 
 /****************
 Nav
@@ -45,14 +54,19 @@ Home Header
 
 .bg-image {
   position: relative;
-  height: 500px;
-  background-image: linear-gradient(to bottom, rgba($logoGreen, .3), rgba($logoGrey, .6)), url(./images/yogahero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
 
 }
-
+.home-hero-height {
+  height: 500px;
+}
+@media only screen and (max-width: 768px){
+  .home-hero-height {
+    height: 275px;
+  }
+}
 .business-info {
   background-color: rgba($logoGreen, .8);
   color: #f2f2f2;
@@ -70,27 +84,209 @@ Home Header
   border-right: solid thin #cccccc;
 }
 .header-side {
+  overflow: hidden;
+}
 
+
+// The wrap around border on company name
+
+.border-holder-wrapper {
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+}
+.border-holder  {
+  position: absolute;
+  top: 0;
+  display: block;
+
+}
+.border-holder h3 {
+    padding: 10px;
+}
+// Top span
+.border-holder  span:nth-child(1) {
+  width: 100%;
+  height:2px;
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $lightOrange;
+  @include scaleX(0);
+  @include animation(revealTopHolder, .3s, linear, .3s, forwards);
+}
+@keyframes revealTopHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-webkit-keyframes revealTopHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-moz-keyframes revealTopHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-o-keyframes revealTopHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-ms-keyframes revealTopHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+// left span
+.border-holder  span:nth-child(2) {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $lightOrange;
+
+  @include translateY(-100%);
+  @include animation(revealLeftHolder, .4s, linear, .6s, forwards);
+}
+@keyframes revealLeftHolder {
+  100% {
+    @include translateY(0%);
+  }
+}
+@-webkit-keyframes revealLeftHolder {
+  100% {
+    @include translateY(0%);
+  }
+}
+@-moz-keyframes revealLeftHolder {
+  100% {
+    @include translateY(0%);
+  }
+}
+@-o-keyframes revealLeftHolder {
+  100% {
+    @include translateY(0%);
+  }
+}
+@-ms-keyframes revealLeftHolder {
+  100% {
+    @include translateY(0%);
+  }
+}
+// Right span
+ .border-holder span:nth-child(3)  {
+  width: 2px;
+  height: 115%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $lightOrange;
+  @include translateY(-100%);
+  @include animation(revealRightHolder, .4s, linear, .6s, forwards);
+}
+@keyframes revealRightHolder {
+  100% {
+     @include translateY(0%);
+  }
+}
+@-webkit-keyframes revealRightHolder {
+  100% {
+     @include translateY(0%);
+  }
+}
+@-moz-keyframes revealRightHolder {
+  100% {
+     @include translateY(0%);
+  }
+}
+@-o-keyframes revealRightHolder {
+  100% {
+     @include translateY(0%);
+  }
+}
+@-ms-keyframes revealRightHolder {
+  100% {
+     @include translateY(0%);
+  }
+}
+// Bottom Right span
+.border-holder span:nth-child(4) {
+  width: 300%;
+  height: 2px;
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+  background-color: $lightOrange;
+  @include transform-origin(right, 50%);
+  @include scaleX(0);
+  @include animation(revealBottomRightHolder, 1s, linear, 1.1s, forwards);
+}
+@keyframes revealBottomRightHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+// Bottom Left span
+.border-holder span:nth-child(5) {
+  width: 300%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $lightOrange;
+  @include transform-origin(left, 50%);
+  @include scaleX(0);
+  @include animation(revealBottomLeftHolder, 1s, linear, 1.1s, forwards);
+}
+@keyframes revealBottomLeftHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-webkit-keyframes revealBottomLeftHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-moz-keyframes revealBottomLeftHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-o-keyframes revealBottomLeftHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+@-ms-keyframes revealBottomLeftHolder {
+  100% {
+    @include scaleX(1);
+  }
+}
+
+.header-side {
   border-bottom: solid thin #cccccc;
 }
 .header-side-img {
   height: 200px;
   width: 100px;
 }
-@media screen and (max-width: 992px){
-  .bg-image {
-    height: 350px;
 
-  }
-  .header-side-img {
-    height: 75px;
-    width: 50px;
-  }
-}
+
+
+
 @media screen and (max-width: 768px){
-  .bg-image {
-    height: 250px;
-
+  .header-side-img {
+    height: 125px;
+    width: 80px;
   }
   .b-right {
     border-right: none;
@@ -108,8 +304,7 @@ Home Info section
 .home-about-img {
   width: 100%;
   height: 300px;
-  // box-shadow: -4px 0 3px 1px rgba(0,0,0, .5);
-  border: solid thin $darkBlue;
+  box-shadow: $boxShadow;
 }
 .home-about-info .link {
   color: $white;
@@ -138,41 +333,86 @@ Home Services
   list-style: none;
 
    li {
-    width: 300px;
+    width: 100%;
+    max-width: 340px;
     min-height: 325px;
-    margin: 25px;
     transition: .4s;
 
     .services-image-div {
-      width: 100%;
+      width: 85%;
       height: 175px;
+      margin: 0 auto;
       position: relative;
       overflow: hidden;
-      border: solid thin $black;
+      box-shadow: $boxShadow;
+
+    }
+    .services-image-div:before {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: rgba(0,0,0,.5);
+      @include translateX(-100%);
+      @include transition(.4s);
+    }
+    .services-image-div:after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      background-color: rgba(0,0,0,.5);
+      @include translateX(100%);
+      @include transition(.4s);
+    }
+    .services-image-div span {
+      color: $white;
+      text-align: center;
+      position: absolute;
+      top: 40%;
+      left: 34%;
+      z-index: 15;
+      @include opacity(0);
+      @include transition(1s);
+    }
+  
+    .services-text {
+      color: $logoGrey;
+      text-align: center;
     }
     &:hover {
-      background-color: $logoGreen;
       color: $logoGrey;
 
-      .services-image-div {
-        border: solid thin $logoGreen;
+      a {
+        text-decoration: none;
       }
-      img {
 
+      img {
         transform: scale(1.05);
       }
+      .services-image-div:before,.services-image-div:after {
+        @include translateX(0%);
+      }
+
+      .services-image-div span {
+        @include opacity(1);
+      }
+     }
   }
-}
   .services-text {
-    padding: 20px 10px 10px 10px;
+    padding: 20px 0 10px 0;
   }
   li img {
-    width: inherit;
+    width: 100%;
     height: 175px;
-    position: absolute;
     transition: .4s;
   }
-
 
 }
 /****************
@@ -222,9 +462,11 @@ Contact advertise
 /****************
 Home Testimonials
 ****************/
-
 .home-testimonials {
-  min-height: 400px;
+
+}
+.testimonials {
+  min-height: 500px;
 
 }
 .carousel-wrapper {
@@ -233,4 +475,57 @@ Home Testimonials
 .testimonial-car-center {
   position: relative;
 
+}
+.testimonial-car-center q {
+  color: $logoGrey;
+  font-size: 18px;
+  font-weight: bold;
+}
+.testimonial-author {
+  color: $darkBlue;
+  font-weight: bold;
+}
+.testimonial-from {
+  color: $darkBlue;
+  font-weight: lighter;
+
+}
+
+@media only screen and (max-width: 768px){
+ .testimonials {
+   min-height: 650px;
+ }
+  .testimonial-car-center q {
+
+    font-size: 18px;
+
+  }
+}
+@media only screen and (max-width: 500px){
+ .testimonials {
+   min-height: 800px;
+ }
+ .testimonial-car-center q {
+
+   font-size: 15px;
+
+ }
+}
+
+/************************
+Services page
+************************/
+.services-hero-height {
+  height: 300px;
+}
+.instructors {
+  min-height: 500px;
+
+}
+.pregnancy {
+  min-height: 500px;
+
+}
+.elderly {
+  min-height: 500px;
 }

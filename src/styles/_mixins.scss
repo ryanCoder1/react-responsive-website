@@ -1,5 +1,5 @@
 
-
+// headers for site
 @mixin home-headers($lightOrange, $black) {
   width: 100%;
   position: relative;
@@ -36,4 +36,97 @@
     transform: translateX(-25%);
   }
 
+ }
+
+ @mixin border-radius($r: 7px){
+   border-radius: $r;
+   -webkit-border-radius: $r;
+   -moz-border-radius: $r;
+   -o-border-radius: $r;
+   -ms-border-radius: $r;
+
+ }
+
+ @mixin animation($name, $duration, $fill-mode, $delay, $direction){
+   animation: $name $duration $fill-mode $delay $direction;
+   -webkit-animation: $name $duration $fill-mode $delay $direction;
+   -moz-animation: $name $duration $fill-mode $delay $direction;
+   -o-animation: $name $duration $fill-mode $delay $direction;
+   -ms-animation: $name $duration $fill-mode $delay $direction;
+
+ }
+ @mixin transition-basic($duration){
+   transition: $duration;
+   -webkit-transition:$duration;
+   -moz-transition: $duration;
+   -o-transition: $duration;
+   -ms-transition: $duration;
+
+ }
+ @mixin translateX($perc){
+   transform: translateX($perc);
+   -webkit-transform: translateX($perc);
+   -moz-transform: translateX($perc);
+   -o-transform: translateX($perc);
+   -ms-transform: translateX($perc);
+ }
+
+ @mixin translateY($perc){
+   transform: translateY($perc);
+   -webkit-transform: translateY($perc);
+   -moz-transform: translateY($perc);
+   -o-transform: translateY($perc);
+   -ms-transform: translateY($perc);
+ }
+
+ @mixin scale($size){
+   transform: scale($size);
+   -webkit-transform: scale($size);
+   -moz-transform: scale($size);
+   -o-transform: scale($size);
+   -ms-transform: scale($size);
+
+ }
+ @mixin transform-origin($direction, $perc){
+   transform-origin: $direction $perc;
+   -webkit-transform-origin: $direction $perc;
+   -moz-transform-origin: $direction $perc;
+   -o-transform-origin: $direction $perc;
+   -ms-transform-origin: $direction $perc;
+ }
+ @mixin scaleY($size){
+   transform: scaleY($size);
+   -webkit-transform: scaleY($size);
+   -moz-transform: scaleY($size);
+   -o-transform: scaleY($size);
+   -ms-transform: scaleY($size);
+
+ }
+ @mixin scaleX($size){
+   transform: scaleX($size);
+   -webkit-transform: scaleX($size);
+   -moz-transform: scaleX($size);
+   -o-transform: scaleX($size);
+   -ms-transform: scaleX($size);
+
+ }
+
+ @mixin skewY($deg){
+   transform: skewY($deg);
+   -webkit-transform: skewY($deg);
+   -moz-transform: skewY($deg);
+   -o-transform: skewY($deg);
+   -ms-transform: skewY($deg);
+ }
+ @mixin rotate($deg){
+   transform: rotate($deg);
+   -webkit-transform: rotate($deg);
+   -moz-transform: rotate($deg);
+   -o-transform: rotate($deg);
+   -ms-transform: rotate($deg);
+ }
+ @mixin opacity($trans){
+   opacity: $trans;
+   -khtml-opacity: $trans;
+   -moz-opacity: $trans;
  }

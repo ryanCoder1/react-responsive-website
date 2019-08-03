@@ -20,18 +20,18 @@ class TestimonialsSlide extends Component{
   render(){
     const testimonial = testimonials.map((testimonial, index) => {
       return (
-        <div style={{height: 400}}>
-          <div className="carousel-center testimonial-car-center">
-            <q>{testimonial.content}</q>
-            <p className="mt-3">{testimonial.author}</p>
-            <p>{testimonial.from}</p>
+        <div className="testimonials" key={index}>
+          <div className="carousel-center testimonial-car-center col-xs-12">
+            <q className="testimonial-content  py-3">{testimonial.content}</q>
+            <p className="testimonial-author mt-3">- {testimonial.author}</p>
+            <p className="testimonial-from">From: {testimonial.from}</p>
 
           </div>
         </div>
       );
     });
   return (
-    <section className="home-testimonials p-5 ">
+    <section className="home-testimonials py-5 px-1 p-md-5 ">
 
     <div>
 
