@@ -12,12 +12,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state =  {
-       compInfo: {
-           email: 'yogaShop@yahoo.com',
-           address: '43 Doxter st. Manchester NH 03104',
-           phoneNumber: '(603) 555-4678'
-         },
-
+    
     }
   }
   render(){

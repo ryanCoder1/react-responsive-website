@@ -381,7 +381,7 @@ Home Services
       @include opacity(0);
       @include transition(1s);
     }
-  
+
     .services-text {
       color: $logoGrey;
       text-align: center;
@@ -518,14 +518,95 @@ Services page
 .services-hero-height {
   height: 300px;
 }
-.instructors {
-  min-height: 500px;
+.services-offer-container {
+  min-height: 325px;
 
 }
-.pregnancy {
-  min-height: 500px;
+.services-offer h4 {
+  color: $logoGrey;
+}
+.offer-ul {
+  list-style: none;
 
 }
-.elderly {
-  min-height: 500px;
+.offer-ul li a {
+  color: $lightOrange;
+  font-weight: bold;
+}
+.services-content {
+  min-height: inherit;
+  width: 100%;
+  background-color: $darkStrap;
+  color: $lightestGrey;
+  border-bottom: solid 2px $white;
+}
+.services-sections {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+}
+
+.services:nth-child(even) {
+  background-color: $white;
+}
+.services:nth-child(even):after {
+  @include angle-border-light($white, 100vw);
+}
+.services:nth-child(odd) {
+
+  background-color: $darkStrap;
+}
+.services:nth-child(odd):after {
+  @include angle-border-dark($darkStrap, 100vw);
+
+}
+.services:nth-child(odd) {
+  color: $lightestGrey;
+}
+.services-img {
+  min-width: 250px;
+  max-width: 400px;
+  max-height: 200px;
+  box-shadow: $boxShadow;
+}
+.services  .services-desc h4  {
+  color: $lightOrange;
+}
+
+.services:nth-child(odd) .session  {
+  color: $logoLighterGrey;
+}
+.services:nth-child(even) .session  {
+  color: $grey;
+}
+.services-class ul {
+  max-width: 300px;
+}
+.services-class ul li {
+  list-style: none;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  padding: 0 10px;
+  background-color: $logoGreen;
+
+}
+.services-date {
+  min-width: 125px;
+  display: block;
+  color: $white;
+}
+.hours-light {
+  padding: 0 10px;
+  background-color: $white;
+  border: solid thin $logoGreen;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  color: $logoGrey;
+}
+.services-sidebar {
+  position: relative;
+  z-index: 10;
 }

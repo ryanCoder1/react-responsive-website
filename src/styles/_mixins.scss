@@ -38,6 +38,38 @@
 
  }
 
+@mixin angle-border-dark($color, $windWidth) {
+
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    display: block;
+    bottom: -60px;
+    left: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width:   0 0 60px $windWidth;
+    border-color: transparent  transparent transparent $color;
+
+
+}
+@mixin angle-border-light($color, $windWidth) {
+
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    display: block;
+    bottom: -60px;
+    left: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width:   0 0 60px $windWidth;
+    border-color: transparent  transparent transparent $color;
+
+
+}
+
+
  @mixin border-radius($r: 7px){
    border-radius: $r;
    -webkit-border-radius: $r;

@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ScrollEffect from 'react-animate-on-scroll';
+import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 import logo from '../images/yogalogobig.png';
 import heroImg from '../images/yogahero.jpg';
 import yogaClass from '../images/yogaclass.jpg';
 import yogaInstructors from '../images/yogainstructors.jpg';
-import yogaElders from '../images/yogaelders.jpg';
-import yogaForPregnancy from '../images/yogaforpregnancy.jpg';
+import yogaElders from '../images/elderly.jpg';
+import yogaForPregnancy from '../images/pregnant.jpg';
 import SidebarAdvertise from './features/SidebarAdvertise';
 import ContactAdvertise from './features/ContactAdvertise';
 import Testimonials from './features/TestimonialsSlide';
+import companyInfo from './features/websiteInfo';
 
 
 
 class Home extends Component {
 
     render() {
+      console.log(companyInfo);
       const greeting = "Hello all!";
       return (
         <div>
@@ -41,9 +43,9 @@ class Home extends Component {
           </aside>
           <div className="bg-image home-hero-height col-xs-12 col-sm-12 col-md-8" style={bgImageStyle}>
             <div className="business-info d-flex flex-wrap flex-column flex-md-row">
-              <span className="b-right">{this.props.compInfo.email} </span>
-              <span className="b-right">{this.props.compInfo.address}  </span>
-              <span>{this.props.compInfo.phoneNumber}</span>
+              <span className="b-right">{companyInfo[0].email} </span>
+              <span className="b-right">{companyInfo[0].address}  </span>
+              <span>{companyInfo[0].phoneNumber}</span>
             </div>
           </div>
 
@@ -65,9 +67,9 @@ class Home extends Component {
 
         <section className="home-services py-5">
           <div className="pl-3">
-            <h4 className="home-headers"><Link to="/services" >Services</Link></h4>
+            <h4 className="home-headers"><Link to="/services#header" >Services</Link></h4>
           </div>
-        <ScrollEffect animateIn="bounceInUp" queueClass="queue" duration="1" queueDuration=".4">
+        <ScrollAnimation animateIn="bounceInUp" queueClass="queue" animateOnce={true}>
           <ul className="home-services-ul d-flex justify-content-center justify-content-sm-around align-items-start flex-wrap mt-5 p-0">
             <li className="queue">
 
@@ -109,7 +111,7 @@ class Home extends Component {
               </Link>
             </li>
           </ul>
-        </ScrollEffect>
+        </ScrollAnimation>
         </section>
         <ContactAdvertise />
         <Testimonials />

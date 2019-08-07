@@ -4,7 +4,7 @@ import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import RBCarousel from "react-bootstrap-carousel";
 
 
-import testimonials from './testimonialslist';
+import testimonials from './testimonials';
 
 
 const styles = { height: 400, width: "100%" };
